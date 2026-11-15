@@ -1,0 +1,7 @@
+# Apache 2.4. Only index.php should be reachable from the web.
+<FilesMatch "^(?!index\.php$).+\.(php|md|sql|json|log|zip|csv|lock|sample\.php)$">
+    Require all denied
+</FilesMatch>
+<FilesMatch "^config.*\.php$">
+    Require all denied
+</FilesMatch>
